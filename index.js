@@ -1,1 +1,19 @@
-gsap.registerPlugin(ScrollTrigger); const welcomeSection = document.getElementById('welcome'); const loginButton = document.querySelector('button.py-2.px-4.font-mullish.text-white.border-white.border-2.rounded-sm.text-sm.font-bold.shadow-md.shadow-lightBlue500'); const signupButton = document.querySelector('button.py-2.px-2.w-40.border-2.rounded-md.bg-white.text-lightBlue.font-bold'); loginButton.addEventListener('click', () => { welcomeSection.classList.remove('hidden'); gsap.to(welcomeSection, { opacity: 1, duration: 2 }); }); signupButton.addEventListener('click', () => { welcomeSection.classList.remove('hidden'); gsap.to(welcomeSection, { opacity: 1, duration: 2 }); });
+// Load the GSAP script
+const script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js';
+document.head.appendChild(script);
+
+// Check if the GSAP object is available
+if (window.gsap) {
+  // Animate the welcome message using GSAP
+  gsap.from('.welcome', {
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    stagger: 0.5,
+  });
+} else {
+  // Display the welcome message without animation if the GSAP script fails to load
+  const welcomeMessage = document.querySelector('.welcome');
+  welcomeMessage.style.display = 'block';
+}
