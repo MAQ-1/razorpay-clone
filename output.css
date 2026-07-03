@@ -1,1 +1,13 @@
-.welcome { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2rem; color: #4169E1; animation: fadeIn 2s; } @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.welcome {
+  font-family: 'Mulish', sans-serif;
+  background-color: #f4f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.welcome h1 {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
